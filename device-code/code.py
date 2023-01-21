@@ -17,8 +17,11 @@ with Battery() as bat:
 
 with IMU() as imu:
     while True:
-        print("Acceleration:", imu.acceleration)
-        time.sleep(1)
+#       print("Acceleration:", imu.acceleration)
+        print("Acceleration: X:%.2f, Y: %.2f, Z: %.2f m/s^2" % (imu.acceleration))
+        print("Gyro X:%.2f, Y: %.2f, Z: %.2f radians/s" % (imu.gyro))
+        print("")
+        time.sleep(0.5)
 
 # with Mic() as mic:
 #     for i in range(5):
